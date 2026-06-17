@@ -42,7 +42,7 @@ namespace _20260610_Titkositas
             {
                 Aes aes = Aes.Create();
                 byte[] pass = Encoding.UTF8.GetBytes(this.Password);
-                aes.SetKey(SHA256.HashData(pass));
+                aes.Key = SHA256.HashData(pass);
                 aes.IV = MD5.HashData(pass);
                 ICryptoTransform encryptor = aes.CreateEncryptor(aes.Key, aes.IV);
                 using (FileStream originalTxt = new FileStream(FilePathTextBox.Text, FileMode.Open))

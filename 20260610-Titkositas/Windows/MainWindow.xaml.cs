@@ -1,5 +1,4 @@
-﻿using _20260610_Titkositas.Windows;
-using System.Text;
+﻿using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -10,7 +9,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace _20260610_Titkositas
+namespace _20260610_Titkositas.Windows
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -26,7 +25,7 @@ namespace _20260610_Titkositas
         {
             FileOpenForCryptionWindow fileOpenForCryptionWindow = new FileOpenForCryptionWindow();
             fileOpenForCryptionWindow.Owner = this;
-            fileOpenForCryptionWindow.Password = this.PasswordTextBox.Text;
+            //fileOpenForCryptionWindow.Password = this.PasswordTextBox.Text;
             fileOpenForCryptionWindow.ShowDialog();
         }
 
@@ -34,7 +33,7 @@ namespace _20260610_Titkositas
         {
             FileOpenForDecryptionWindow fileOpenForDecryptionWindow = new FileOpenForDecryptionWindow();
             fileOpenForDecryptionWindow.Owner = this;
-            fileOpenForDecryptionWindow.Password = this.PasswordTextBox.Text;
+            //fileOpenForDecryptionWindow.Password = this.PasswordTextBox.Text;
             fileOpenForDecryptionWindow.ShowDialog();
         }
     }
