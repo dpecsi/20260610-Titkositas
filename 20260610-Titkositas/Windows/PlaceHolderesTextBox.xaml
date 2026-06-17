@@ -5,9 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:_20260610_Titkositas.Windows"
              mc:Ignorable="d" 
-             d:DesignHeight="100" d:DesignWidth="600">
+             d:DesignHeight="20" d:DesignWidth="130">
     <Grid>
         <TextBox HorizontalAlignment="Stretch" Name="UserInput" Visibility="Collapsed" LostFocus="UserInput_LostFocus" />
-        <TextBox HorizontalAlignment="Stretch" Name="PlaceholderInput" Visibility="Visible" GotFocus="PlaceholderInput_GotFocus" Text="Jelszó" FontSize="65" Foreground="Gray" VerticalContentAlignment="Center" />
+        <TextBox HorizontalAlignment="Stretch" Name="PlaceholderInput" Visibility="Visible" GotFocus="PlaceholderInput_GotFocus" Text="{Binding Path=PlaceholderText}" Foreground="Gray" VerticalContentAlignment="Center" />
     </Grid>
 </UserControl>

@@ -20,9 +20,44 @@ namespace _20260610_Titkositas.Windows
     /// </summary>
     public partial class PlaceHolderesTextBox : UserControl
     {
+
+        public DependencyProperty placeholderTextProperty = DependencyProperty.Register(nameof(PlaceholderText), typeof(string), typeof(PlaceHolderesTextBox), new PropertyMetadata(string.Empty));
+        
+        public string PlaceholderText
+        {
+            get
+            {
+                return PlaceholderInput.Text;
+            }
+            set
+            {
+                PlaceholderInput.Text = value;
+            }
+        }
+
+        public DependencyProperty textProperty = DependencyProperty.Register(nameof(Text), typeof(string), typeof(PlaceHolderesTextBox), new PropertyMetadata(string.Empty));
+
+        public string Text
+        {
+            get
+            {
+                return UserInput.Text;
+            }
+            set
+            {
+                UserInput.Text = value;
+            }
+        }
+
         public PlaceHolderesTextBox()
         {
             InitializeComponent();
+            this.DataContext = this;
+            if (Text != string.Empty)
+            {
+                UserInput.Visibility = Visibility.Visible;
+                PlaceholderInput.Visibility = Visibility.Collapsed;
+            }
         }
 
         private void UserInput_LostFocus(object sender, RoutedEventArgs e)

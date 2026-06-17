@@ -21,7 +21,7 @@
         </Grid.RowDefinitions>
         <Label Content="Jelszó:" HorizontalAlignment="Right" />
         <!--<TextBox Grid.Column="1" Grid.ColumnSpan="3" Margin="3" Name="PasswordTextBox" />-->
-        <local:PlaceHolderesTextBox Grid.Column="1" Grid.ColumnSpan="3" Margin="3" x:Name="PasswordTextBox" />
+        <local:PlaceHolderesTextBox Grid.Column="1" Grid.ColumnSpan="3" Margin="0" x:Name="PasswordTextBox" PlaceholderText="asdasd" />
         <Button Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="1" Margin="10" Name="CryptionButton" Click="CryptionButton_Click">
             <StackPanel>
                 <Image Source="/Assets/lakat.png" MaxHeight="64" />
